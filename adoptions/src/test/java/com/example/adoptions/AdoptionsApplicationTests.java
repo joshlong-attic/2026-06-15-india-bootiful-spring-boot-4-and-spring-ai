@@ -2,21 +2,21 @@ package com.example.adoptions;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.modulith.core.ApplicationModule;
 import org.springframework.modulith.core.ApplicationModules;
 import org.springframework.modulith.docs.Documenter;
 
 @SpringBootTest
 class AdoptionsApplicationTests {
 
-	@Test
-	void contextLoads() {
-		var am = ApplicationModules.of(AdoptionsApplication.class);
-		am.verify();
+    @Test
+    void contextLoads() {
 
-		IO.println(am);
+        var am = ApplicationModules.of(AdoptionsApplication.class);
+        am.verify();
 
-		new Documenter(am).writeDocumentation();
-	}
+        IO.println(am);
+
+        new Documenter(am).writeDocumentation();
+    }
 
 }
